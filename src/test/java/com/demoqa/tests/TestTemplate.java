@@ -15,7 +15,6 @@ public abstract class TestTemplate {
 
     public WebDriver driver;
 
-
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();

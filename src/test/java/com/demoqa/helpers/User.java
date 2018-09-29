@@ -8,16 +8,15 @@ public class User {
     private String userName;
     private String email;
     private String password;
-    private String confirmPassword;
 
-    public User(String firstName, String lastName, String phoneNumber, String userName, String email, String password, String confirmPassword) {
+    public User(String firstName, String lastName, String phoneNumber, String userName
+            , String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.confirmPassword = confirmPassword;
     }
 
     public String getFirstName() {
@@ -42,9 +41,5 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
-
-    public String getConfirmPassword() {
-        return confirmPassword;
     }
 }

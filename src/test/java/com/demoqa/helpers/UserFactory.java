@@ -5,18 +5,18 @@ public class UserFactory {
 
     public  static User createUserWithMinimalCredentials() {
         return new User("a", "a", "89888888888", "a"
-                , "a@a.com", "QWErty12", "QWErty12");
+                , "a@a.com", "QWErty12");
     }
 
     public static User createUserWithMaximumCredentials() {
         return new User(getSimpleString(64), getSimpleString(64), "+79888888888"
                 , getSimpleString(64), getSimpleString(58) + "@a.com"
-                , getSimpleString(62) + "A" + 1, getSimpleString(62) + "A" + 1);
+                , getSimpleString(62) + "A" + 1);
     }
 
     public static User createSignUpUser() {
         return new User("a", "a", "89888888888", "a"
-                , "a@a.com", "QWErty12", "QWErty12");
+                , "a@a.com", "QWErty12");
     }
 
     private static String getSimpleString(int length) {

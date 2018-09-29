@@ -78,7 +78,7 @@ public class RegistrationPage extends BasePage {
         fillUsername(signUpUser.getUserName());
         fillEmail(signUpUser.getEmail());
         fillPassword(signUpUser.getPassword());
-        fillConfirmPassword(signUpUser.getConfirmPassword());
+        fillConfirmPassword(signUpUser.getPassword());
     }
 
     public RegistrationPage open() {
