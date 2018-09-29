@@ -31,14 +31,6 @@ public abstract class TestTemplate {
         driver = null;
     }
 
-     protected static String getSimpleString(int length) {
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < length; i++) {
-            str.append("a");
-        }
-        return str.toString();
-    }
-
     protected static String getRandomMail() {
         DateFormat df = new SimpleDateFormat("ddMMyyyyHHmmss");
         Date today = Calendar.getInstance().getTime();

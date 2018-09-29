@@ -1,5 +1,6 @@
 package com.demoqa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -11,9 +12,8 @@ import java.util.concurrent.TimeUnit;
 public abstract class BasePage {
 
     WebDriver driver;
-    private WebDriverWait wait;
+    WebDriverWait wait;
     private int timeOut = 5;
-    public static String URL_PATH;
 
     BasePage(WebDriver driver) {
         this.driver = driver;
@@ -43,5 +43,18 @@ public abstract class BasePage {
             restoreDefaultImplicitWait();
         }
         return isElementOnPage;
+    }
+
+    boolean doesElementHaveErrorMessage(WebElement element) {
+        changeImplicitWait(500, TimeUnit.MILLISECONDS);
+        boolean doesElementHaveErrorMessage = true;
+        try {
+            element.findElement(By.xpath("../../div[@class='fieldset error']"));
+        } catch (WebDriverException ex) {
+            doesElementHaveErrorMessage = false;
+        } finally {
+            restoreDefaultImplicitWait();
+        }
+        return doesElementHaveErrorMessage;
     }
 }

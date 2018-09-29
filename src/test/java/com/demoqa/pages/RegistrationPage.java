@@ -1,96 +1,113 @@
 package com.demoqa.pages;
 
+import com.demoqa.core.CommonExpectedConditions;
+import com.demoqa.helpers.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class RegistrationPage extends BasePage {
 
     public final static String URL_PATH = "https://web.archive.org/web/20180815044632/http://demoqa.com/registration";
-    private final static String EXPECTED_TITLE = "Registration | Demoqa";
+    public final static String EXPECTED_TITLE = "Registration | Demoqa";
+
 
     @FindBy(id = "name_3_firstname")
-    private static WebElement firstNameArea;
+    public WebElement firstNameField;
     @FindBy(id = "name_3_lastname")
-    private static WebElement lastNameArea;
+    public WebElement lastNameField;
     @FindBy(id = "phone_9")
-    private static WebElement phoneNumberArea;
+    public WebElement phoneNumberField;
     @FindBy(id = "username")
-    private static WebElement usernameArea;
+    public WebElement usernameField;
     @FindBy(id = "email_1")
-    private static WebElement emailArea;
+    public WebElement emailField;
     @FindBy(id = "password_2")
-    private static WebElement passwordArea;
+    public WebElement passwordField;
     @FindBy(id = "confirm_password_password_2")
-    private static WebElement confirmPasswordArea;
+    public WebElement confirmPasswordField;
     @FindBy(name = "pie_submit")
-    private static WebElement submitButton;
+    public WebElement submitButton;
     @FindBy(css = ".piereg_message")
-    private static WebElement regInfo;
+    public WebElement regInfo;
     @FindBy(css = "[class='legend error']")
-    private static WebElement errorAlert;
-
+    public WebElement legendError;
+    @FindBy(id = "description")
+    public WebElement desciptionField;
+    @FindBy(css = "[class='fieldset error']")
+    public WebElement fieldError;
 
     public RegistrationPage(WebDriver driver) {
         super(driver);
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(EXPECTED_TITLE, actualTitle);
     }
 
     public void fillFirstName(String str) {
-        firstNameArea.sendKeys(str);
+        firstNameField.sendKeys(str);
     }
 
     public void fillLastName(String str) {
-        lastNameArea.sendKeys(str);
+        lastNameField.sendKeys(str);
     }
 
     public void fillPhoneNumber(String str) {
-        phoneNumberArea.sendKeys(str);
+        phoneNumberField.sendKeys(str);
     }
 
     public void fillUsername(String str) {
-        usernameArea.sendKeys(str);
+        usernameField.sendKeys(str);
     }
 
     public void fillEmail(String str) {
-        emailArea.sendKeys(str);
+        emailField.sendKeys(str);
     }
 
     public void fillPassword(String str) {
-        passwordArea.sendKeys(str);
+        passwordField.sendKeys(str);
     }
 
     public void fillConfirmPassword(String str) {
-        confirmPasswordArea.sendKeys(str);
+        confirmPasswordField.sendKeys(str);
     }
 
-    public void fillMainFields(String firstName, String lastName, String phoneNumber, String userName
-            , String email, String password, String confirmPassword) {
+    public void fillRequiredFieldsByUserCredentials(User signUpUser) {
 
-        fillFirstName(firstName);
-        fillLastName(lastName);
-        fillPhoneNumber(phoneNumber);
-        fillUsername(userName);
-        fillEmail(email);
-        fillPassword(password);
-        fillConfirmPassword(confirmPassword);
+        fillFirstName(signUpUser.getFirstName());
+        fillLastName(signUpUser.getLastName());
+        fillPhoneNumber(signUpUser.getPhoneNumber());
+        fillUsername(signUpUser.getUserName());
+        fillEmail(signUpUser.getEmail());
+        fillPassword(signUpUser.getPassword());
+        fillConfirmPassword(signUpUser.getConfirmPassword());
     }
-    public RegistrationPage open(){
+
+    public RegistrationPage open() {
         driver.get(URL_PATH);
+        wait.until(CommonExpectedConditions.pageLoaded());
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(EXPECTED_TITLE, actualTitle);
         return this;
     }
+
     public void submitData() {
         submitButton.click();
-   }
+    }
 
     public boolean isRegistrationSuccessfull() {
         return regInfo.getText().equals("Thank you for your registration");
     }
 
-    public boolean isThereErrorMessage(){
-        return isElementOnPage(errorAlert);
+    public boolean isRegistrationFailedByEmail() {
+        return regInfo.getText().equals("Email already exists");
+    }
+
+    public void setFocusToDescription() {
+        desciptionField.click();
+    }
+
+    public void verifyErrorMessageOnElement(WebElement element) {
+        element.clear();
+        setFocusToDescription();
+        Assert.assertTrue(doesElementHaveErrorMessage(element));
     }
 }
