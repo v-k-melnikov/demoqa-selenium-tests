@@ -1,6 +1,6 @@
 package com.demoqa.helpers;
 
-public class UserFactory {
+public class UserBuilder {
 
 
     public  static User createUserWithMinimalCredentials() {

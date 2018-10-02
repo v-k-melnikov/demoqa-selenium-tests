@@ -1,9 +1,8 @@
 package com.demoqa.tests;
 
 import com.demoqa.helpers.User;
-import com.demoqa.helpers.UserFactory;
+import com.demoqa.helpers.UserBuilder;
 import com.demoqa.pages.RegistrationPage;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,15 +12,15 @@ public class RegistrationPageTests extends TestTemplate {
     @Test(priority = 1)
     public void registerUserTest() {
         RegistrationPage registrationPage = new RegistrationPage(driver).open();
-        registrationPage.fillRequiredFieldsByUserCredentials(UserFactory.createSignUpUser());
+        registrationPage.fillRequiredFieldsByUserCredentials(UserBuilder.createSignUpUser());
         registrationPage.submitData();
         Assert.assertTrue(registrationPage.isRegistrationSuccessfull());
     }
 
     @DataProvider(name = "minimumAndMaximumCharactersToInput")
     public Object[][] dataProviderMethod() {
-        return new Object[][]{{UserFactory.createUserWithMaximumCredentials()}
-                , {UserFactory.createUserWithMinimalCredentials()}};
+        return new Object[][]{{UserBuilder.createUserWithMaximumCredentials()}
+                , {UserBuilder.createUserWithMinimalCredentials()}};
     }
 
 
