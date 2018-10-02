@@ -126,7 +126,7 @@ public  class TwoMonthsAgoTestModel {
 
     }
 
-    @Test(priority = 2, description = "MyTest leaving a required field blank.")
+    @Test(priority = 2, description = "Test leaving a required field blank.")
     public void testSecondCaseFirstScenario() {
 
 //        enterValidValues();
@@ -186,7 +186,7 @@ public  class TwoMonthsAgoTestModel {
 
     }
 
-    @Test(priority = 2, description = "MyTest exceeding maximum field input lengths.")
+    @Test(priority = 2, description = "Test exceeding maximum field input lengths.")
     public void testSecondCaseSecondScenario() {
 
         firstName.sendKeys(simpleString(65));
@@ -202,7 +202,7 @@ public  class TwoMonthsAgoTestModel {
         }
     }
 
-    @Test(priority = 2, description = "MyTest various field input.")
+    @Test(priority = 2, description = "Test various field input.")
     public void testSecondCaseThirdScenario() {
 
         firstName.sendKeys("#");
