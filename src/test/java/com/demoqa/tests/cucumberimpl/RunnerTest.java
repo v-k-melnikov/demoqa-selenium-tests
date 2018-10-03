@@ -1,4 +1,4 @@
-package com.demoqa.tests;
+package com.demoqa.tests.cucumberimpl;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/com/demoqa/tests/features",
-        glue = "com.demoqa.tests",
+        glue = "com.demoqa.tests.cucumberimpl",
         tags = "@all",
-        snippets = SnippetType.CAMELCASE
+        snippets = SnippetType.UNDERSCORE
 )
 
 public class RunnerTest  {
