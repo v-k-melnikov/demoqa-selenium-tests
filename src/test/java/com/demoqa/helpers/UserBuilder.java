@@ -23,7 +23,7 @@ public class UserBuilder {
                 , getSimpleString(62) + "A" + 1);
     }
 
-    private static String getSimpleString(int length) {
+    public static String getSimpleString(int length) {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < length; i++) {
             str.append("a");
@@ -31,14 +31,14 @@ public class UserBuilder {
         return str.toString();
     }
 
-    private static String getRandomMail() {
+    public static String getRandomMail() {
         DateFormat df = new SimpleDateFormat("ddMMyyyyHHmmss");
         Date today = Calendar.getInstance().getTime();
         String todayDate = df.format(today);
         return "randomemail" + todayDate + "@gmail.com";
     }
 
-    private static String getRandomUsername() {
+    public static String getRandomUsername() {
         DateFormat df = new SimpleDateFormat("ddMMyyyyHHmmss");
         Date today = Calendar.getInstance().getTime();
         String todayDate = df.format(today);
