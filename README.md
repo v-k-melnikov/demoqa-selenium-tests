@@ -84,10 +84,11 @@
 </table>
 <h2>4. TEST CASES</h2>
 
+<h4>Before all tests navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></h4>
+
 
 <h3>Test case TMTJ001. Registration with valid fields.</h3>
 
-<h4>Before all tests navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></h4>
 <p> Steps:</p>
 
 <p>1. Fill fields email and username with new unique valid values.
