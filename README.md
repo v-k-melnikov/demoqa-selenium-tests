@@ -87,12 +87,12 @@
 
 <h3>Test case TMTJ001. Registration with valid fields.</h3>
 
+<h4>Before all tests navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></h4>
 <p> Steps:</p>
 
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
-<p>2. Fill fields email and username with new unique valid values.
-<p>3. Fill other required fields with valid values</p>
-<p>4. Click on submit.</p>
+<p>1. Fill fields email and username with new unique valid values.
+<p>2. Fill other required fields with valid values</p>
+<p>3. Click on submit.</p>
 <p> Expected results</p>
 <p>1. Server saved the introduced data.</p>
 <p>2. There was displayed a message on top of the form "Thanks for your registration".</p>
@@ -101,8 +101,7 @@
 <h4> Scenario 1. Testing minimum number of characters accepted for each field and first cases for fields "Hobby", "Phone
     Number" and "Your Profile Picture".</h4>
 <p> Steps:</p>
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
-<p>2. Fill fields and choose options for them according to the next table.</p>
+<p>1. Fill fields and choose options for them according to the next table.</p>
 <table>
     <tr>
         <td><b>Field's name</b></td>
@@ -137,7 +136,7 @@
         <td>"QWErty12"</td>
     </tr>
 </table>
-<p>3. Click on submit.</p>
+<p>2. Click on submit.</p>
 <p> Expected results</p>
 <p>1. There wasn't displayed messages near the fields about incorrect input.</p>
 <p>2. There was displayed a message about existing email and username.</p>
@@ -145,9 +144,8 @@
 <h4> Scenario 2. Testing maximum number of characters accepted for each field and second cases for fields "Hobby",
     "Phone Number" and "Your Profile Picture".</h4>
 <p> Steps:</p>
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
 
-<p>2. Fill fields and choose their options according to the next table.</p>
+<p>1. Fill fields and choose their options according to the next table.</p>
 <table>
     <tr>
         <td><b>Field's name</b></td>
@@ -182,7 +180,7 @@
         <td>The same value like in the "Password" field</td>
     </tr>
 </table>
-<p>3. Click on "Submit" button.</p>
+<p>2. Click on "Submit" button.</p>
 
 <p> Expected results</p>
 
@@ -193,8 +191,7 @@
 
 <p> Steps:</p>
 
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
-<p>2. Fill fields and choose their options according to the next table.</p>
+<p>1. Fill fields and choose their options according to the next table.</p>
 
 
 <table>
@@ -233,8 +230,7 @@
 
 <p> Steps:</p>
 
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
-<p>2. Fill fields and choose their options according to the next table.</p>
+<p>1. Fill fields and choose their options according to the next table.</p>
 <table>
     <tr>
         <td><b>Input value</b></td>
@@ -269,8 +265,7 @@
 <h3> Test case TMTJ005. Test various field input.</h3>
 
 <p> Steps:</p>
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
-<p>2. Fill fields and choose their options according to the next table.</p>
+<p>1. Fill fields and choose their options according to the next table.</p>
 <table>
     <tr>
         <td><b>Input value</b></td>
@@ -307,9 +302,8 @@
 
 <p> Steps: </p>
 
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
 
-<p>2. Fill presented field "Password" with some value and field "Confirm Password" with another value</p>
+<p>1. Fill presented field "Password" with some value and field "Confirm Password" with another value</p>
 
 <p>Expected results</p>
 
@@ -319,9 +313,8 @@
 
 <p> Steps: </p>
 
-<p>1. Navigate to <a href="http://demoqa.com/registration/">http://demoqa.com/registration/</a></p>
 
-<p>2. Make sure that Enter key work as a substitute for the "Submit" button when the focus is on the fields "First
+<p>1. Make sure that Enter key work as a substitute for the "Submit" button when the focus is on the fields "First
     Name", "Last Name"
     , "Phone Number", "Username", "E-mail", "About Yourself", "Password" and "Confirm Password".</p>
 </body>
