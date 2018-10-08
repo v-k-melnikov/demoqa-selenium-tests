@@ -44,30 +44,43 @@ public class RegistrationPage extends BasePage {
 
     public void fillFirstName(String str) {
         firstNameField.sendKeys(str);
+        Assert.assertEquals(firstNameField.getAttribute("value"), str);
     }
 
     public void fillLastName(String str) {
         lastNameField.sendKeys(str);
+        Assert.assertEquals(lastNameField.getAttribute("value"), str);
+
     }
 
     public void fillPhoneNumber(String str) {
         phoneNumberField.sendKeys(str);
+        Assert.assertEquals(phoneNumberField.getAttribute("value"), str);
+
     }
 
     public void fillUsername(String str) {
         usernameField.sendKeys(str);
+        Assert.assertEquals(usernameField.getAttribute("value"), str);
+
     }
 
     public void fillEmail(String str) {
         emailField.sendKeys(str);
+        Assert.assertEquals(emailField.getAttribute("value"), str);
+
     }
 
     public void fillPassword(String str) {
         passwordField.sendKeys(str);
+        Assert.assertEquals(passwordField.getAttribute("value"), str);
+
     }
 
     public void fillConfirmPassword(String str) {
         confirmPasswordField.sendKeys(str);
+        Assert.assertEquals(confirmPasswordField.getAttribute("value"), str);
+
     }
 
     public void fillRequiredFieldsByUserCredentials(User signUpUser) {
