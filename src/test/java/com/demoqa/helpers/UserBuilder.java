@@ -23,6 +23,12 @@ public class UserBuilder {
                 , getSimpleString(62) + "A" + 1);
     }
 
+    public static User createUserWithNewCredentials() {
+        return new User(getSimpleString(32), getSimpleString(32), "+79888888888"
+                , getSimpleString(32), getSimpleString(29) + "@a.com"
+                , getSimpleString(31) + "A" + 1);
+    }
+
     public static String getSimpleString(int length) {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < length; i++) {
