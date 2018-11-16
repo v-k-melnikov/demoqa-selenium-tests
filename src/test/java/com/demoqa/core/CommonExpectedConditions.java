@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
 public class CommonExpectedConditions {
-
+//First branch
     public static ExpectedCondition<Boolean> pageLoaded() {
         return new ExpectedCondition<Boolean>() {
             @Override
