@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demoqa-selenium-tests" target="1.8" />
+      <module name="tests" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
