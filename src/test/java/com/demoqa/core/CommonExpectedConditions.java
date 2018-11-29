@@ -16,7 +16,7 @@ public class CommonExpectedConditions {
 
             @Override
             public String toString() {
-                return "Page didn't load";
+                return "Page didn't load ";
             }
         };
 
