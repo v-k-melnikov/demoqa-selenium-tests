@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demoqa-selenium-tests" />
+        <module name="tests" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="demoqa-selenium-tests" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
