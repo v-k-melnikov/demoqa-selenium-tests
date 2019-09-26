@@ -1,0 +1,13 @@
+/target/
+.classpath
+.project
+*.class
+/resources
+/.project
+/.classpath
+.settings/
+/MANIFEST.MF
+/bin/
+/resources/
+*.idea
+*.iml
